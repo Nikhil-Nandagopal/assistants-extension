@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Appsmith Assistants",
+  "version": "1.0",
+  "description": "Embed Appsmith Assistants on any webpage",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "options_page": "src/options/options.html",
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "css": ["src/styles/widget.css"],
+    "js": ["src/content.js"]
+  }],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

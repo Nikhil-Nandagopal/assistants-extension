@@ -1,0 +1,79 @@
+/* Chat Button */
+.appsmith-chat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--primary-color, #4CAF50);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+  z-index: 2147483646;
+}
+
+.appsmith-chat-button:hover {
+  transform: scale(1.05);
+}
+
+.appsmith-chat-button svg {
+  transition: opacity 0.2s ease;
+}
+
+/* Chat Widget */
+.appsmith-chat-widget {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 25vw;
+  height: 70vh;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 2147483645;
+  overflow: hidden;
+}
+
+.appsmith-chat-widget.open {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.appsmith-chat-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.appsmith-chat-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 68, 68, 0.1);
+  color: #ff4444;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+  z-index: 2147483647;
+}
+
+.appsmith-chat-close:hover {
+  background: rgba(255, 68, 68, 0.2);
+}
